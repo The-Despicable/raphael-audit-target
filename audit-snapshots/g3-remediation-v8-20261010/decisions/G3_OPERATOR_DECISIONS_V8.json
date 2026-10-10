@@ -1,0 +1,55 @@
+{
+  "artifact_id": "G3_OPERATOR_DECISIONS_20261010_V7",
+  "schema_version": "2",
+  "recorded_utc": "2026-10-10",
+  "supersedes": {
+    "artifact": "G3_OPERATOR_DECISIONS_20261010.json",
+    "location": "/home/yaser/audit-rsi1/g3-remediation-decisions-20261010/decisions/G3_OPERATOR_DECISIONS_20261010.json",
+    "reason": "E-2: the earlier file was Markdown containing an embedded JSON block, not strict JSON. It is preserved unmodified; this file is the machine-readable replacement.",
+    "values_changed": false
+  },
+  "baseline": {
+    "commit": "fc3e2c132591eab7edaa12e97e13fe2d01619411",
+    "tree": "e24d42bf7f7655293f3eb3a273c9ce4d94b1e061"
+  },
+  "S10": {
+    "decision": "SET_EXPLICIT_MAXIMUM",
+    "maximum_runtime_minutes": 45,
+    "maximum_runtime_seconds": 2700,
+    "relationship_to_existing_minimum": "separate ceiling; the existing 20-minute minimum remains unchanged",
+    "e2_minimum_seconds": 1200,
+    "scope": "runtime validation only",
+    "runtime_validation_authorized": false
+  },
+  "S16": {
+    "decision": "INCLUDE_VENV",
+    "repository_scan_includes_venv": true,
+    "worktree_scan_includes_venv": true
+  },
+  "S17": {
+    "decision": "RETAIN_LITERAL_MARKER_CONDITION",
+    "actual_scope_failure_carrier": "S6",
+    "s17_marker_condition": "retained literally",
+    "s17_does_not_independently_define_scope_failure": true
+  },
+  "S5": {
+    "status": "PENDING_OPERATOR_APPROVAL",
+    "pinned_expected_digest": null,
+    "observed_digest_retrieved": "a23b71564692d77f7b52d1525fbaed4f05ec654ab4b5510028b2bded14127be0",
+    "note": "observed value recorded for explicit review only; it is NOT pinned as the expected digest"
+  },
+  "ENUM": {
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "authorized": false,
+    "enforced_in_runner": false,
+    "note": "Git path-enumeration failure is routed through the internal-error fail-closed path. The ENUM identifier is NOT an active authorized condition and is not recorded in the enforcement ledger."
+  },
+  "runtime_validation_authorized": false,
+  "governance": {
+    "g3": "NOT_ACCEPTED",
+    "p4": "NOT_AUTHORIZED",
+    "p10": "NOT_AUTHORIZED",
+    "c8": "UNRESOLVED",
+    "section_14_12_glm_adversarial_review": "OUTSTANDING"
+  }
+}

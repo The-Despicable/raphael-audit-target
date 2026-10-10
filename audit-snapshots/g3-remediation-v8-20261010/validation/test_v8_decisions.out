@@ -1,0 +1,27 @@
+== decision validator (real) ==
+PASS: packaged v8 decision artifact validates
+SKIP: legacy Markdown artifact not present (self-contained package)
+== S5 inventory (digest must stay unpinned) ==
+PASS: S5 pinned digest remains None (unapproved)
+PASS: S5 pinned digest is rejected
+== S10 ceiling + E-2 minimum ==
+PASS: S10 ceiling is 2700
+PASS: E-2 minimum is 1200 (separate)
+PASS: inconsistent low ceiling rejected
+PASS: minutes*60!=seconds rejected
+== S16 / S17 / runtime flag ==
+PASS: validator reports S16 True
+PASS: S17 marker retained
+PASS: runtime_validation_authorized False
+PASS: S16 venv=false rejected
+== ENUM authorization boundary ==
+PASS: ENUM unauthorized in decision
+PASS: ENUM authorized=true rejected
+PASS: runner has no executable stop/violate/record ENUM
+PASS: enumeration failure routed via die_internal
+== E-1 S10 env capture ordering (source inspection of the real runner) ==
+PASS: env captured (line 274) before load_decisions (line 562)
+PASS: exactly one env-capture line
+
+-------------------------------------------
+PASS=17 FAIL=0

@@ -1,0 +1,42 @@
+== QW-01 S14 canonicalization ==
+PASS: QW-01 /a/./b canonicalizes
+PASS: QW-01 /a/../b canonicalizes
+PASS: QW-01 /x//y/ canonicalizes
+PASS: QW-01 trailing separators canonicalize
+PASS: QW-01 plain path unchanged
+PASS: QW-01 relative input becomes absolute
+PASS: QW-01 nonexistent destination canonicalizes
+PASS: QW-01 symlink resolves to target
+PASS: QW-01 empty input fails closed
+
+== QW-01 containment (both directions) ==
+PASS: QW-01 equal ART==protected is a violation
+PASS: QW-01 descendant ART is a violation
+PASS: QW-01 ancestor ART (protected inside ART) is a violation
+PASS: QW-01 sibling is safe
+PASS: QW-01 '..' traversal into protected is caught (v7 bypass regression)
+
+== QW-04 S16 boolean normalization ==
+PASS: QW-04 'True' -> true
+PASS: QW-04 'true' -> true
+PASS: QW-04 'False' -> false
+PASS: QW-04 ambiguous value fails closed
+PASS: QW-04 validator->normalize->scan selects INCLUDE_VENV (raw='True')
+PASS: QW-04 invalid decision artifact still rejected (fail-closed)
+
+== QW-02 S7 hash-error accounting ==
+PASS: QW-02 four authorized failures == authorized set (integrity allowed)
+PASS: QW-02 unexpected extra 'secret_mode_0' detected (no false integrity PASS)
+PASS: QW-02 unexpected extra 'file_io_err' detected (no false integrity PASS)
+PASS: QW-02 unexpected extra 'symlink_loop_a' detected (no false integrity PASS)
+PASS: QW-02 successfully hashed file excluded from unhashed set
+PASS: QW-02 missing authorized entry detected
+PASS: QW-02 missing tracked-list fails closed
+PASS: QW-02 missing manifest fails closed
+PASS: QW-02 filename with spaces accounted exactly
+
+== QW-03 descriptive digest ==
+PASS: QW-03 descriptive digest is stable (071a338eb41127eabb47e6a3fcda09d90524aaf9887e1c41bd186450bf9479dc)
+
+-------------------------------------------
+PASS=30 FAIL=0

@@ -1,0 +1,34 @@
+# Integrity manifest — real SHA-256 for every artifact in the v8 package.
+# runner_version=v8-integrity
+# verification: cd audit-snapshots/g3-remediation-v8-20261010 && sha256sum -c <(grep -v '^#' HANDOFF_MANIFEST_V8_20261010.md)
+# The manifest is EXCLUDED from its own hash list (self-reference).
+# The reconciliation file IS covered and was finalized before this manifest.
+#
+# EXCLUDED BY NAME (documented control outputs, produced AFTER hashing):
+#   validation/manifest_verify.out        (raw sha256sum -c transcript)
+#   validation/manifest_verify_summary.txt (human summary of that transcript)
+#   Reason: both are DERIVED FROM this manifest's verification run, so their
+#   content cannot be hashed before the verification it describes. They are
+#   verification evidence, not package content.
+#
+d5add3e906a92db02376c4e97b90f78d71a48e1f604c3e565e126adbc1d45f8c  FINDINGS_DISPOSITION_MATRIX_V8.md
+8ca9ba27810fd485571f9d0fa21ab9a6b9d67cedcf7ebced15f83b331a46aee1  REMEDIATION_HANDOFF_V8_20261010.md
+209feeab11730d0311672120debb1639a40ea731e9ae777ce32c8386a0a18f81  capture_validation_and_manifest.sh
+f712031d153889d87bf700fe67de3bb06ba9f1980b261b0c3f1eb0b9369c8ac2  decisions/ENUM_PROPOSAL_20261010.md
+3325bb29db096eefc8f9a866197c9032a95da205e02e231bbae313433a232d0a  decisions/G3_OPERATOR_DECISIONS_V8.json
+40b06f16e0a0c04ae6907f73246e656fbcc6a5b9933646ebb78cd1b6b44feca0  decisions/validate_decisions.py
+02d3ba5b6a9e8efa19f9a8378d61bb848852b8ce1e41d36550263e42d3e83478  g3-floor-run-v8-integrity.sh
+5fc360b004311c059f3531d4cc29162158dc50b87d7acf9b589f0022e5ea5dac  g3_v8_lib.sh
+e1066541923b468d1582980cbdd5a1d3db1aa26cb7444b747b594099d570284d  validation/NOT_VALIDATED.txt
+e4e1e107ed68f0e41d65b71c3057de9b47bbe4f79ff7ed76e599ebe5cada701e  validation/bash_n_result.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  validation/bash_n_stderr.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  validation/bash_n_stdout.txt
+3b02f515a39a4785c9248aab4c5b5a89443674af1b9808270be58465603d5572  validation/lib_n_result.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  validation/lib_n_stderr.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  validation/lib_n_stdout.txt
+f0fb2becd466b6e986fa4a75f23b9c60b7a867d221a55ded739ae8733261e010  validation/manifest_inventory_check.txt
+13aae969bcc6ed1c25b8b17883ce399b551287b744941787a55a17a92e25bdd1  validation/shellcheck_result.txt
+7c5aa71278be1a6360576d1fd5d574b87b8627637e4346967af252bc16148c5f  validation/test_v8_decisions.out
+991ec94596e55a6287bd4cda3986650244f19fc8bf53e5ba6a5badfa9caa37ac  validation/test_v8_decisions.sh
+264ce7b6063753d1ea18ca71ac926fee3d7353bba650899e5f2cc3b942b14856  validation/test_v8_regressions.out
+e336f93ff7c2e71187e093102eb5f0f6728469cbf26ef05bf30fcbf332319f85  validation/test_v8_regressions.sh

@@ -1,0 +1,2 @@
+shellcheck=NOT_INSTALLED
+note=static lint NOT performed; installing tools is not authorized

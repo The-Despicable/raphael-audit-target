@@ -1,0 +1,45 @@
+MANIFEST INVENTORY RECONCILIATION (v8)
+
+GENERATION ORDER: validation -> final inventory -> this file (final) ->
+                   checksum manifest (last) -> sha256sum -c verification.
+
+COUNTS (computed from the actual directory at generation time):
+  total_files_on_disk_now=22
+  manifest_entries_expected=23
+    (= files_now + this reconciliation file; the manifest is created after
+     and is self-excluded from its own hash list.)
+
+DOCUMENTED CONTROL-FILE EXCLUSIONS:
+  HANDOFF_MANIFEST_V8_20261010.md
+    reason: a checksum manifest cannot contain its own digest (self-reference).
+    treatment: excluded from its own hash list; documented, not a missing file.
+  validation/manifest_verify.out, validation/manifest_verify_summary.txt
+    reason: produced by the sha256sum -c run that verifies this manifest.
+    treatment: excluded by name (documented in the manifest header); their content
+               cannot be hashed before the verification they describe.
+
+TEMPORARY FILES: none inside the package; working files live in mktemp -d OUTSIDE.
+
+FILES ON DISK (final):
+FINDINGS_DISPOSITION_MATRIX_V8.md
+HANDOFF_MANIFEST_V8_20261010.md
+REMEDIATION_HANDOFF_V8_20261010.md
+capture_validation_and_manifest.sh
+decisions/ENUM_PROPOSAL_20261010.md
+decisions/G3_OPERATOR_DECISIONS_V8.json
+decisions/validate_decisions.py
+g3-floor-run-v8-integrity.sh
+g3_v8_lib.sh
+validation/NOT_VALIDATED.txt
+validation/bash_n_result.txt
+validation/bash_n_stderr.txt
+validation/bash_n_stdout.txt
+validation/lib_n_result.txt
+validation/lib_n_stderr.txt
+validation/lib_n_stdout.txt
+validation/manifest_inventory_check.txt
+validation/shellcheck_result.txt
+validation/test_v8_decisions.out
+validation/test_v8_decisions.sh
+validation/test_v8_regressions.out
+validation/test_v8_regressions.sh

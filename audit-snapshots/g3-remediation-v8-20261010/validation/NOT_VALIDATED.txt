@@ -1,0 +1,18 @@
+NOT VALIDATED (runtime) — no floor run is authorized; the v8 runner has NEVER been executed.
+Shell syntax checking, isolated unit tests and checksum verification are NOT runtime validation.
+No G3 runner execution, floor suite, Raphael application code, benchmark or red-team operation
+was performed at any point in producing this candidate.
+
+  - S14 artifact-isolation boundary: code + isolated containment tests only.
+      Evidence would be a real run: ART/WT creation refused inside a protected location.
+  - S7  hash-error accounting: isolated fixture tests only.
+      Evidence would be a real run: FP_UNHASHED_BEFORE/AFTER.txt and FP_UNREADABLE_SET_MISMATCH*.
+  - S16 INCLUDE_VENV scan selection: exercised end-to-end through the real validator + g3_norm_bool.
+      Evidence would be a real run: FP_FPSTAR_PRE/POST_*.txt showing the scan executed.
+  - S10 2700 s ceiling: armed only if a ceiling is loaded; never executed.
+  - S5 dependency digest: BLOCKED pending operator approval; NOT pinned.
+  - ENUM enumeration failure: routed to die_internal; NOT an authorized condition; never executed.
+  - S6/S8/S13/S17 and all other stop conditions: NOT runtime-verified.
+
+Verified here: bash -n (parse), isolated unit tests against the shared production library,
+and SHA256 manifest verification. None of these prove runner behavior.

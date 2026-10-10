@@ -1,0 +1,2 @@
+command=bash -n g3_v8_lib.sh
+exit=0

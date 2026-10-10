@@ -1,0 +1,2 @@
+command=bash -n g3-floor-run-v8-integrity.sh
+exit=0

@@ -1,0 +1,29 @@
+MANIFEST VERIFICATION (integrity proven by actual verification)
+command: cd audit-snapshots/g3-remediation-v8-20261010 && sha256sum -c <(grep -v '^#' HANDOFF_MANIFEST_V8_20261010.md)
+sha256sum_c_exit=0
+entries_listed=21
+entries_matched_OK=21
+entries_mismatched_FAILED=0
+
+Full output:
+FINDINGS_DISPOSITION_MATRIX_V8.md: OK
+REMEDIATION_HANDOFF_V8_20261010.md: OK
+capture_validation_and_manifest.sh: OK
+decisions/ENUM_PROPOSAL_20261010.md: OK
+decisions/G3_OPERATOR_DECISIONS_V8.json: OK
+decisions/validate_decisions.py: OK
+g3-floor-run-v8-integrity.sh: OK
+g3_v8_lib.sh: OK
+validation/NOT_VALIDATED.txt: OK
+validation/bash_n_result.txt: OK
+validation/bash_n_stderr.txt: OK
+validation/bash_n_stdout.txt: OK
+validation/lib_n_result.txt: OK
+validation/lib_n_stderr.txt: OK
+validation/lib_n_stdout.txt: OK
+validation/manifest_inventory_check.txt: OK
+validation/shellcheck_result.txt: OK
+validation/test_v8_decisions.out: OK
+validation/test_v8_decisions.sh: OK
+validation/test_v8_regressions.out: OK
+validation/test_v8_regressions.sh: OK
