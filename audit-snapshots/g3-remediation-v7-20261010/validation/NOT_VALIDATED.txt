@@ -1,0 +1,27 @@
+NOT VALIDATED (runtime) — no floor run is authorized; the v7 runner has NEVER been executed.
+Shell syntax checking, isolated unit tests and checksum verification are NOT runtime validation.
+
+  - S1  HEAD identity ............ evidence: FP_phase1_head.txt
+  - S2  tree identity ............ evidence: FP_phase1_tree.txt
+  - S3  clean worktree at start .. evidence: FP_phase1_status.txt
+  - S4  interpreter range ........ evidence: FP_start.txt
+  - S5  dependency digest ........ BLOCKED pending operator approval (observed a23b7156..., not pinned)
+  - S6  manifest line-count scope  evidence: FP_BEFORE_count.txt, FP_AFTER_count.txt, FP_diff_summary.txt
+  - S7  unreadable-file set ...... evidence: FP_BEFORE_unreadable.txt, FP_AFTER_unreadable.txt,
+                                          FP_symlinks_before.txt, FP_symlinks_after.txt
+  - S8  protected content unchanged evidence: FP_HASH_DIFF.txt, FP_verify_BEFORE_failures.txt
+  - S9  collection exit .......... evidence: FP_collect.exit
+  - S10 wall-clock ceiling ....... approved 2700 s from decision artifact (execution NOT authorized)
+  - S11 OOM / signal termination .. evidence: FP_*.exit verdict= field
+  - S12 environmental cause ....... evidence: FP_*.out, FP_*.err (PATTERN-BASED residual)
+  - S13 clean worktree at end .... evidence: FP_post_status.txt
+  - S14 artifact boundary ........ normalized both-direction containment check (not runtime-proven)
+  - S15 ART emptiness ............ independent non-empty guard (not runtime-proven)
+  - S16 artifact contamination ... evidence: FP_FPSTAR_PRE/POST_*.txt (INCLUDE_VENV per decision)
+  - S17 SCOPE_MISMATCH invariant .. evidence: FP_diff_summary.txt (literal marker retained)
+  - DECISION config load/validate evidence: FP_PREFLIGHT.txt (not runtime-proven)
+  - ENUM enumeration failure ..... PROPOSED_NOT_AUTHORIZED; routed to die_internal (INTERNAL, exit 3)
+
+Also unvalidated at runtime: the whole v7 runner; fail-closed escalation; the S10 env-conflict
+guard inside the runner; the decision-consumption path inside the runner.
+Only bash -n (parse), isolated tests, and checksum verification were performed.

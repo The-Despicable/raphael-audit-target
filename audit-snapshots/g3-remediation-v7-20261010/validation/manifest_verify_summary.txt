@@ -1,0 +1,27 @@
+MANIFEST VERIFICATION (E-5: integrity proven by actual verification)
+command: cd /home/yaser/audit-rsi1/g3-remediation-v7-20261010 && sha256sum -c <(grep -v '^#' HANDOFF_MANIFEST_V7_20261010.md)
+sha256sum_c_exit=0
+entries_listed=14
+entries_matched_OK=14
+entries_mismatched_FAILED=0
+
+Full verification output (every manifest-listed file):
+REMEDIATION_HANDOFF_V7_20261010.md: OK
+capture_validation_and_manifest.sh: OK
+decisions/ENUM_PROPOSAL_20261010.md: OK
+decisions/G3_OPERATOR_DECISIONS_V7.json: OK
+decisions/validate_decisions.py: OK
+g3-floor-run-v7-integrity.sh: OK
+validation/NOT_VALIDATED.txt: OK
+validation/bash_n_result.txt: OK
+validation/bash_n_stderr.txt: OK
+validation/bash_n_stdout.txt: OK
+validation/manifest_inventory_check.txt: OK
+validation/shellcheck_result.txt: OK
+validation/test_v7_decisions.out: OK
+validation/test_v7_decisions.sh: OK
+
+INTEGRITY CLAIM: 0 mismatched file(s). Integrity is asserted ONLY
+  because this actual sha256sum -c run reported it, not because generation
+  completed. The v6 package FAILED this check for
+  validation/manifest_inventory_check.txt (hashed then rewritten).

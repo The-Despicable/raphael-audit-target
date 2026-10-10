@@ -1,0 +1,36 @@
+MANIFEST INVENTORY RECONCILIATION (E-5 / E-8 fixed)
+generated_by=capture_validation_and_manifest.sh (v7)
+
+GENERATION ORDER: validation -> final inventory -> this file (final) ->
+                   checksum manifest (last) -> sha256sum -c verification.
+
+COUNTS (computed from the actual directory at generation time):
+  total_files_on_disk_now=13
+  manifest_entries_expected=14
+  (manifest_entries_expected = files_now + this reconciliation file;
+   the checksum manifest is created afterwards and is self-excluded.)
+
+DOCUMENTED CONTROL-FILE EXCLUSIONS:
+  HANDOFF_MANIFEST_V7_20261010.md
+    reason: the checksum manifest cannot contain its own digest (self-reference).
+    treatment: excluded from its own hash list; hashed by no one; NOT an
+               unexplained missing file.
+
+TEMPORARY FILES: none are created inside this package. All working files
+  live in a mktemp -d directory OUTSIDE the package and are removed on exit,
+  so no .disk.tmp / .mani.tmp can appear in the inventory.
+
+FILES ON DISK (final, relative paths):
+REMEDIATION_HANDOFF_V7_20261010.md
+capture_validation_and_manifest.sh
+decisions/ENUM_PROPOSAL_20261010.md
+decisions/G3_OPERATOR_DECISIONS_V7.json
+decisions/validate_decisions.py
+g3-floor-run-v7-integrity.sh
+validation/NOT_VALIDATED.txt
+validation/bash_n_result.txt
+validation/bash_n_stderr.txt
+validation/bash_n_stdout.txt
+validation/shellcheck_result.txt
+validation/test_v7_decisions.out
+validation/test_v7_decisions.sh

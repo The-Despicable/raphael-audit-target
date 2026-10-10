@@ -1,0 +1,26 @@
+PASS: E-2 real v6 JSON artifact validates (exit 0)
+PASS: E-2 old Markdown artifact rejected by real JSON parser (exit 1)
+PASS: E-2 missing configuration rejected (exit 1)
+PASS: E-2 inconsistent low ceiling (<=1200) rejected
+PASS: E-2 minutes*60!=seconds rejected
+PASS: E-2 wrongly-typed seconds ('soon') rejected
+PASS: E-2 wrong S10 decision token rejected
+PASS: E-2 S5 pinned-digest (not yet approved) rejected
+PASS: E-2 ENUM authorized=true rejected
+PASS: E-2 ceiling is exactly 2700
+PASS: E-2 minimum is 1200 (separate, unchanged)
+PASS: E-2 S5 digest still unpinned (None)
+PASS: E-2 runtime_validation_authorized=False
+PASS: E-2 enum_authorized=False
+PASS: E-1 runner's shipped check_s10_env_not_conflicting has the expected guard body
+PASS: E-1 env value captured (line 224) BEFORE load_decisions (line 495)
+PASS: E-1 exactly one env-capture line (no late duplicate)
+PASS: E-1 unset override accepted
+PASS: E-1 matching override accepted
+PASS: E-1 conflicting override rejected (fail-closed)
+PASS: E-1 conflicting+1 override rejected
+PASS: ENUM: no executable line activates a stop/violate/record ENUM condition
+PASS: ENUM: only ENUM reference in executable code is the die_internal explanatory message
+PASS: ENUM: enumeration failure routed through die_internal (fail-closed, INTERNAL)
+----
+PASS=24 FAIL=0

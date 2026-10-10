@@ -1,0 +1,21 @@
+# Integrity manifest — real SHA-256 for every artifact in this package.
+# runner_version=v7-integrity
+# verification: cd /home/yaser/audit-rsi1/g3-remediation-v7-20261010 && sha256sum -c <(grep -v '^#' HANDOFF_MANIFEST_V7_20261010.md)
+# NOTE: this manifest is EXCLUDED from its own hash list (self-reference).
+#       The reconciliation file (validation/manifest_inventory_check.txt) IS
+#       covered, and was finalized before this manifest was generated.
+#
+649ca7ea8681bb82139b2a1aecb86686ec54e18d63b6f7c65c1357e6bde0ea8c  REMEDIATION_HANDOFF_V7_20261010.md
+e8ad2eec9ed28c9908c05dae9749c865e662a1332f59bb3addcffcdb4fc6c23f  capture_validation_and_manifest.sh
+f712031d153889d87bf700fe67de3bb06ba9f1980b261b0c3f1eb0b9369c8ac2  decisions/ENUM_PROPOSAL_20261010.md
+3325bb29db096eefc8f9a866197c9032a95da205e02e231bbae313433a232d0a  decisions/G3_OPERATOR_DECISIONS_V7.json
+40b06f16e0a0c04ae6907f73246e656fbcc6a5b9933646ebb78cd1b6b44feca0  decisions/validate_decisions.py
+ea83caab283fcab22e8b3b8527a6974a6ad2de629e0c2388354ceeda2509d1e2  g3-floor-run-v7-integrity.sh
+9ed7f54f6d9bd732165b734d75d3515b544ae7765bbb60504730049fa75d319d  validation/NOT_VALIDATED.txt
+a308f294ce67693449b57ca6dcfca3cf2752e19e7c9c46ea947dea0cb52cbf5f  validation/bash_n_result.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  validation/bash_n_stderr.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  validation/bash_n_stdout.txt
+6bb43ea35110b58070667e228920e117204b5a85c5f4c86b6a25235c2a0f7765  validation/manifest_inventory_check.txt
+13aae969bcc6ed1c25b8b17883ce399b551287b744941787a55a17a92e25bdd1  validation/shellcheck_result.txt
+cd1bdedc55ee30d8082a1599cc8542faef918341b6c3436f413ab3f59d393ceb  validation/test_v7_decisions.out
+eb17d0eca553e4bb55921f6ec448357bcd2b168a3f5a03363d8bd56a1b7e0905  validation/test_v7_decisions.sh

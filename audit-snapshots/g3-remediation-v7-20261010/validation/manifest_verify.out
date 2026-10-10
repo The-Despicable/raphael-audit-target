@@ -1,0 +1,14 @@
+REMEDIATION_HANDOFF_V7_20261010.md: OK
+capture_validation_and_manifest.sh: OK
+decisions/ENUM_PROPOSAL_20261010.md: OK
+decisions/G3_OPERATOR_DECISIONS_V7.json: OK
+decisions/validate_decisions.py: OK
+g3-floor-run-v7-integrity.sh: OK
+validation/NOT_VALIDATED.txt: OK
+validation/bash_n_result.txt: OK
+validation/bash_n_stderr.txt: OK
+validation/bash_n_stdout.txt: OK
+validation/manifest_inventory_check.txt: OK
+validation/shellcheck_result.txt: OK
+validation/test_v7_decisions.out: OK
+validation/test_v7_decisions.sh: OK
